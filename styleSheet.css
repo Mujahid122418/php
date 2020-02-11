@@ -1,0 +1,23 @@
+#houseArea,
+#Downpayment,
+#Markupwill,
+#years {
+  border: none;
+}
+#houseArea:hover {
+  color: red;
+  font-style: italic;
+}
+
+#Downpayment:hover {
+  color: red;
+  font-style: italic;
+}
+#Markupwill:hover {
+  color: red;
+  font-style: italic;
+}
+#years:hover {
+  color: red;
+  font-style: italic;
+}
