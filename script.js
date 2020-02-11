@@ -26,13 +26,12 @@ function CheckEligibilityUser() {
   let income = document.getElementById("monthlyIncome").value;
   if (income <= 70000)
     alert("Sorry Your Income is Less Your Are Not Eleigible");
-
-
- }
+}
 // calculate the amount
 function CheckEligibility() {
   //select house area
-  var totalValue = 700000;
+  var totalValue = document.getElementById("totalPrice").value;
+  console.log("totalValue", totalValue);
   var e = document.getElementById("houseArea");
   var houseArea = e.options[e.selectedIndex].value;
 
@@ -84,4 +83,31 @@ function CheckEligibility() {
 
   let TotalmonthInstallment = monthInstallmentWithOutMarkup + markperMonth;
   console.log("TotalmonthInstallment", TotalmonthInstallment);
+
+  // show result
+  document.getElementById("TotalPayment–DownPayment").innerHTML =
+    " House price is " +
+    totalValue +
+    " and you pay down payment " +
+    downpay +
+    " then remainin value is" +
+    remainingValue;
+
+  // your installments years
+  document.getElementById("installments-years").innerHTML =
+    "Your Installments year is  " + year + "month";
+  // monthly install ment
+  document.getElementById("montlyInstallment").innerHTML =
+    remainingValue + "/" + year + "=" + remainingValue;
+  //Calculate-Mark
+  document.getElementById("Calculate-Mark").innerHTML =
+    "Calculate Mark Up Per Annum" + Markup + "%";
+  //total
+  document.getElementById("Total").innerHTML =
+    "Total payment (in rupees)per month " +
+    monthInstallmentWithOutMarkup +
+    "+ " +
+    markperMonth +
+    "=" +
+    TotalmonthInstallment;
 }
